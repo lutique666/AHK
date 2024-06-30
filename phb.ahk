@@ -35,6 +35,22 @@ Send {Ctrl Down}v{Ctrl Up}
 return
 
 f5::
+clipboard = <p><i>Опция из "Котла Таши со Всякой Всячиной" (по согласованию с Мастером)</i></p>
+Send {Ctrl Down}v{Ctrl Up}
+return
+
+f6::
+clipboard = `, волшебник<sup color="orange">КТсВВ</sup>
+Send {Ctrl Down}v{Ctrl Up}
+return
+
+f7::
+Send {Ctrl Down}c{Ctrl Up}
+StringLower, clipboard, clipboard
+
+return
+
+f8::
 Send {Ctrl Down}c{Ctrl Up}
 FileDelete, %A_scriptdir%/tmp.txt
 FileDelete, %A_scriptdir%/tmp2.txt
@@ -116,3 +132,4 @@ FileRead, clipboard, %A_scriptdir%/tmp2.txt
 StringReplace, clipboard, clipboard, Концентрация`,%A_space%вплоть, Концентрация
 
 return
+
